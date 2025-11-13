@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\El_Kickas\\Downloads\\TpFinalSilva\\TpFinalSilva\\TpFinalSilva.vbproj": {}
+    "C:\\Users\\El_Kickas\\Desktop\\TpFinal\\TpFinalSilva\\TpFinalSilva\\TpFinalSilva.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\El_Kickas\\Downloads\\TpFinalSilva\\TpFinalSilva\\TpFinalSilva.vbproj": {
+    "C:\\Users\\El_Kickas\\Desktop\\TpFinal\\TpFinalSilva\\TpFinalSilva\\TpFinalSilva.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\El_Kickas\\Downloads\\TpFinalSilva\\TpFinalSilva\\TpFinalSilva.vbproj",
+        "projectUniqueName": "C:\\Users\\El_Kickas\\Desktop\\TpFinal\\TpFinalSilva\\TpFinalSilva\\TpFinalSilva.vbproj",
         "projectName": "TpFinalSilva",
-        "projectPath": "C:\\Users\\El_Kickas\\Downloads\\TpFinalSilva\\TpFinalSilva\\TpFinalSilva.vbproj",
+        "projectPath": "C:\\Users\\El_Kickas\\Desktop\\TpFinal\\TpFinalSilva\\TpFinalSilva\\TpFinalSilva.vbproj",
         "packagesPath": "C:\\Users\\El_Kickas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\El_Kickas\\Downloads\\TpFinalSilva\\TpFinalSilva\\obj\\",
+        "outputPath": "C:\\Users\\El_Kickas\\Desktop\\TpFinal\\TpFinalSilva\\TpFinalSilva\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -22,111 +22,130 @@ Partial Class Form2
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        BtnBuscar = New Button()
-        Button3 = New Button()
-        btnbajapr = New Button()
-        BtnAltapr = New Button()
-        DataGridView1 = New DataGridView()
+        Label1 = New Label()
+        Label2 = New Label()
+        txtnombre2 = New TextBox()
+        txtapellido2 = New TextBox()
+        Label3 = New Label()
+        txtdni2 = New TextBox()
+        Label4 = New Label()
+        txtcontraseña2 = New TextBox()
+        Label5 = New Label()
         Button1 = New Button()
-        Button2 = New Button()
-        TxtBuscar = New TextBox()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' BtnBuscar
+        ' Label1
         ' 
-        BtnBuscar.Location = New Point(467, 177)
-        BtnBuscar.Name = "BtnBuscar"
-        BtnBuscar.Size = New Size(116, 45)
-        BtnBuscar.TabIndex = 10
-        BtnBuscar.Text = "Buscar clientes"
-        BtnBuscar.UseVisualStyleBackColor = True
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI Black", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Location = New Point(219, 52)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(352, 37)
+        Label1.TabIndex = 0
+        Label1.Text = "INGRESE NUEVOS DATOS"
         ' 
-        ' Button3
+        ' Label2
         ' 
-        Button3.Location = New Point(467, 228)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(116, 45)
-        Button3.TabIndex = 9
-        Button3.Text = "Modificar Clientes "
-        Button3.UseVisualStyleBackColor = True
+        Label2.AutoSize = True
+        Label2.Location = New Point(219, 208)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(47, 15)
+        Label2.TabIndex = 1
+        Label2.Text = "Usuario"
         ' 
-        ' btnbajapr
+        ' txtnombre2
         ' 
-        btnbajapr.Location = New Point(467, 126)
-        btnbajapr.Name = "btnbajapr"
-        btnbajapr.Size = New Size(116, 45)
-        btnbajapr.TabIndex = 8
-        btnbajapr.Text = "Baja"
-        btnbajapr.UseVisualStyleBackColor = True
+        txtnombre2.Location = New Point(312, 205)
+        txtnombre2.Name = "txtnombre2"
+        txtnombre2.Size = New Size(248, 23)
+        txtnombre2.TabIndex = 2
         ' 
-        ' BtnAltapr
+        ' txtapellido2
         ' 
-        BtnAltapr.Location = New Point(467, 66)
-        BtnAltapr.Name = "BtnAltapr"
-        BtnAltapr.Size = New Size(116, 45)
-        BtnAltapr.TabIndex = 7
-        BtnAltapr.Text = "Alta"
-        BtnAltapr.UseVisualStyleBackColor = True
+        txtapellido2.Location = New Point(312, 246)
+        txtapellido2.Name = "txtapellido2"
+        txtapellido2.Size = New Size(248, 23)
+        txtapellido2.TabIndex = 4
         ' 
-        ' DataGridView1
+        ' Label3
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Location = New Point(29, 40)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(376, 307)
-        DataGridView1.TabIndex = 6
+        Label3.AutoSize = True
+        Label3.Location = New Point(219, 249)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(51, 15)
+        Label3.TabIndex = 3
+        Label3.Text = "Apellido"
+        ' 
+        ' txtdni2
+        ' 
+        txtdni2.Location = New Point(312, 159)
+        txtdni2.Name = "txtdni2"
+        txtdni2.Size = New Size(248, 23)
+        txtdni2.TabIndex = 6
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(219, 162)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(27, 15)
+        Label4.TabIndex = 5
+        Label4.Text = "DNI"
+        ' 
+        ' txtcontraseña2
+        ' 
+        txtcontraseña2.Location = New Point(312, 291)
+        txtcontraseña2.Name = "txtcontraseña2"
+        txtcontraseña2.Size = New Size(248, 23)
+        txtcontraseña2.TabIndex = 8
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(219, 294)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(67, 15)
+        Label5.TabIndex = 7
+        Label5.Text = "Contraseña"
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(467, 279)
+        Button1.Location = New Point(333, 361)
         Button1.Name = "Button1"
-        Button1.Size = New Size(116, 38)
-        Button1.TabIndex = 12
-        Button1.Text = "Salir"
+        Button1.Size = New Size(181, 38)
+        Button1.TabIndex = 9
+        Button1.Text = "Crear cuenta"
         Button1.UseVisualStyleBackColor = True
-        ' 
-        ' Button2
-        ' 
-        Button2.Location = New Point(672, 400)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(116, 38)
-        Button2.TabIndex = 13
-        Button2.Text = "Retroceder"
-        Button2.UseVisualStyleBackColor = True
-        ' 
-        ' TxtBuscar
-        ' 
-        TxtBuscar.Location = New Point(610, 189)
-        TxtBuscar.Name = "TxtBuscar"
-        TxtBuscar.Size = New Size(112, 23)
-        TxtBuscar.TabIndex = 14
         ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(TxtBuscar)
-        Controls.Add(Button2)
         Controls.Add(Button1)
-        Controls.Add(BtnBuscar)
-        Controls.Add(Button3)
-        Controls.Add(btnbajapr)
-        Controls.Add(BtnAltapr)
-        Controls.Add(DataGridView1)
+        Controls.Add(txtcontraseña2)
+        Controls.Add(Label5)
+        Controls.Add(txtdni2)
+        Controls.Add(Label4)
+        Controls.Add(txtapellido2)
+        Controls.Add(Label3)
+        Controls.Add(txtnombre2)
+        Controls.Add(Label2)
+        Controls.Add(Label1)
         Name = "Form2"
         Text = "Form2"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-    Friend WithEvents BtnBuscar As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents btnbajapr As Button
-    Friend WithEvents BtnAltapr As Button
-    Friend WithEvents DataGridView1 As DataGridView
+
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtnombre2 As TextBox
+    Friend WithEvents txtapellido2 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtdni2 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents txtcontraseña2 As TextBox
+    Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TxtBuscar As TextBox
 End Class

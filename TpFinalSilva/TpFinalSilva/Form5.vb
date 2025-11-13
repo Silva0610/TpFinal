@@ -1,41 +1,40 @@
 ﻿Public Class Form5
-    Public IdVentaActual As Integer = 0
-    Dim clsVenta As New Venta()
-    Dim clsSistema As New Sistema()
-    Private Sub Botonasd_Click(sender As Object, e As EventArgs) Handles asd.Click
-
-        If IdVentaActual = 0 Then
-            MessageBox.Show("ERROR: No hay una venta activa para modificar.", "Flujo Incorrecto")
-            Return
-        End If
-        clsSistema.ActualizarItemVenta(Me.IdVentaActual, Me.DataGridView4)
-
-    End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles asd.Click
-
-        If IdVentaActual = 0 Then
-            MessageBox.Show("ERROR: Primero debe iniciar la venta con 'Registrar Venta'.", "Flujo Incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Return
-        End If
-
-        clsSistema.RegistrarItemVenta(IdVentaActual, Me.DataGridView4)
-
-    End Sub
-    Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        clsSistema.CargarVentasDetalle(Me.DataGridView4)
+    Public Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        CargarProductos()
     End Sub
 
-    Private Sub Total_Click(sender As Object, e As EventArgs) Handles Total.Click
-        If IdVentaActual > 0 Then
-            Dim totalVenta As Integer = clsSistema.ObtenerTotalActualVenta(IdVentaActual)
-            MessageBox.Show("Total Acumulado de Venta #" & IdVentaActual.ToString() & ": $" & totalVenta.ToString())
-        Else
-            MessageBox.Show("No hay una venta activa para mostrar el total.", "Advertencia")
-        End If
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Form3.Show()
+        Hide()
+
     End Sub
 
-    Private Sub Salir_Click(sender As Object, e As EventArgs) Handles Salir.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         End
+    End Sub
+
+    Public Sub BtnAlta_Click(sender As Object, e As EventArgs) Handles BtnAltapr.Click
+        Dim pr As New producto
+        pr.Altapr()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnbajapr.Click
+        Dim pr As New producto
+        If pr.IdPr = -1 Then
+            MessageBox.Show("Seleccione un Producto para eliminar.")
+            Return
+        End If
+
+        pr.baja(pr.IdPr)
+    End Sub
+
+    Public Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim pr As New producto
+        pr.modif(pr.Nombre, pr.IdPr, pr.Precio, pr.Categoria)
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BuscarPr.Click
+        Dim pr As New producto
+        pr.buscarpr()
     End Sub
 End Class

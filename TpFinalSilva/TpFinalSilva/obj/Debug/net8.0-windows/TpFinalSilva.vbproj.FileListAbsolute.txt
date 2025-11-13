@@ -66,3 +66,5 @@ C:\Users\El_Kickas\Downloads\TpFinalSilva\TpFinalSilva\obj\Debug\net8.0-windows\
 C:\Users\El_Kickas\Downloads\TpFinalSilva\TpFinalSilva\obj\Debug\net8.0-windows\TpFinalSilva.Form3.resources
 C:\Users\El_Kickas\Downloads\TpFinalSilva\TpFinalSilva\obj\Debug\net8.0-windows\TpFinalSilva.Form4.resources
 C:\Users\El_Kickas\Downloads\TpFinalSilva\TpFinalSilva\obj\Debug\net8.0-windows\TpFinalSilva.Form5.resources
+C:\Users\El_Kickas\Downloads\TpFinalSilva\TpFinalSilva\obj\Debug\net8.0-windows\TpFinalSilva.Form6.resources
+C:\Users\El_Kickas\Downloads\TpFinalSilva\TpFinalSilva\obj\Debug\net8.0-windows\TpFinalSilva.Form7.resources

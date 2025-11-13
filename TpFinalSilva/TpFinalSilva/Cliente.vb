@@ -1,64 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Cliente
-    Private _Cl As String
-    Private _Id As Integer
-    Private _Correo As String
-    Private _tel As Integer
-
-    Public Property Cliente As String
-        Get
-            Return _Cl
-        End Get
-        Set(value As String)
-            If IsNumeric(value) Then
-                Throw New Exception("ERROR DE VALIDACIÓN: Un nombre no puede contener números.")
-            Else
-                _Cl = value
-            End If
-        End Set
-    End Property
-
-    Public Property IdCl As Integer
-        Get
-            Return _Id
-        End Get
-        Set(value As Integer)
-
-            If value <= 0 Or value > 200000 Then
-                Throw New Exception("ERROR: ID de cliente inválido o fuera de rango.")
-            Else
-                _Id = value
-            End If
-        End Set
-    End Property
-
-    Public Property Correo As String
-        Get
-            Return _Correo
-        End Get
-        Set(value As String)
-            If String.IsNullOrWhiteSpace(value) Then
-                Throw New Exception("ERROR: Ingrese un correo electrónico.")
-            Else
-                _Correo = value
-            End If
-        End Set
-    End Property
-
-    Public Property telefono As Integer
-        Get
-            Return _tel
-        End Get
-        Set(value As Integer)
-
-            If value <= 0 Then
-                Throw New Exception("ERROR: Ingrese un teléfono válido.")
-            Else
-                _tel = value
-            End If
-        End Set
-    End Property
-
+    Inherits datos
 
     Public Sub altas()
         Dim nuevoCliente As New Cliente()
@@ -153,15 +95,15 @@ Public Class Cliente
         Dim comando As MySqlCommand
         Try
             Conexion.Open()
-            IdCl = Form2.DataGridView1.CurrentRow.Cells("IdCl").Value
+            IdCl = Form4.DataGridView1.CurrentRow.Cells("IdCl").Value
 
             Dim consulta As String = "UPDATE clientes SET Cliente=@Cliente, Correo=@Correo, Telefono=@Telefono WHERE IdCl=@IdCl"
 
             comando = New MySqlCommand(consulta, Conexion)
-            comando.Parameters.AddWithValue("@Cliente", Form2.DataGridView1.CurrentRow.Cells("Cliente").Value)
+            comando.Parameters.AddWithValue("@Cliente", Form4.DataGridView1.CurrentRow.Cells("Cliente").Value)
             comando.Parameters.AddWithValue("@IdCl", IdCl)
-            comando.Parameters.AddWithValue("@Correo", Form2.DataGridView1.CurrentRow.Cells("Correo").Value)
-            comando.Parameters.AddWithValue("@Telefono", Form2.DataGridView1.CurrentRow.Cells("Telefono").Value)
+            comando.Parameters.AddWithValue("@Correo", Form4.DataGridView1.CurrentRow.Cells("Correo").Value)
+            comando.Parameters.AddWithValue("@Telefono", Form4.DataGridView1.CurrentRow.Cells("Telefono").Value)
 
             comando.ExecuteNonQuery()
 
@@ -174,7 +116,7 @@ Public Class Cliente
     End Sub
     Public Sub buscar()
         Dim conexion As New MySqlConnection("server=localhost;port=3306; user id=root;password=;database=tablafinal")
-        Dim filtro As String = Form2.TxtBuscar.Text.Trim()
+        Dim filtro As String = Form4.TxtBuscar.Text.Trim()
 
         Try
             conexion.Open()
@@ -209,9 +151,9 @@ Public Class Cliente
             adaptador.Fill(tabla)
 
             If tabla.Rows.Count > 0 Then
-                Form2.DataGridView1.DataSource = tabla
+                Form4.DataGridView1.DataSource = tabla
             Else
-                Form2.DataGridView1.DataSource = Nothing
+                Form4.DataGridView1.DataSource = Nothing
                 MessageBox.Show("No se encontraron clientes que coincidan con el filtro.", "Búsqueda Sin Resultados", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
 

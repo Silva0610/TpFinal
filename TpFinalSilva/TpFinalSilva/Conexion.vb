@@ -20,7 +20,7 @@ Module Conexion
 
             adaptador.Fill(tablaClientes)
 
-            Form2.DataGridView1.DataSource = tablaClientes
+            Form4.DataGridView1.DataSource = tablaClientes
 
         Catch ex As Exception
             MessageBox.Show("Error al conectar a la base de datos: " & ex.Message)
@@ -46,7 +46,7 @@ Module Conexion
 
             adaptador.Fill(tablaProductos)
 
-            Form3.DataGridView2.DataSource = tablaProductos
+            Form5.DataGridView2.DataSource = tablaProductos
 
         Catch ex As Exception
             MessageBox.Show("Error al conectar a la base de datos: " & ex.Message)
@@ -64,7 +64,7 @@ Module Conexion
             comando = New MySqlCommand("SELECT * FROM ventas", conexion)
             adaptador = New MySqlDataAdapter(comando)
             adaptador.Fill(tabla)
-            Form4.DataGridView3.DataSource = tabla
+            Form6.DataGridView3.DataSource = tabla
         Catch ex As Exception
             MessageBox.Show("Error al conectar a la base de datos" & ex.Message)
         Finally
@@ -78,7 +78,7 @@ Module Conexion
             comando = New MySqlCommand("SELECT * FROM ventasist", conexion)
             adaptador = New MySqlDataAdapter(comando)
             adaptador.Fill(tabla)
-            Form5.DataGridView4.DataSource = tabla
+            Form7.DataGridView6.DataSource = tabla
         Catch ex As Exception
             MessageBox.Show("Error al conectar a la base de datos" & ex.Message)
         Finally

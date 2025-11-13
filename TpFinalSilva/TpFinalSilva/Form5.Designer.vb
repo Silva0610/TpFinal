@@ -22,65 +22,112 @@ Partial Class Form5
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        DataGridView4 = New DataGridView()
-        Total = New Button()
-        asd = New Button()
-        Salir = New Button()
-        CType(DataGridView4, ComponentModel.ISupportInitialize).BeginInit()
+        TxtPr = New TextBox()
+        Button5 = New Button()
+        Button1 = New Button()
+        BuscarPr = New Button()
+        Button3 = New Button()
+        btnbajapr = New Button()
+        BtnAltapr = New Button()
+        DataGridView2 = New DataGridView()
+        CType(DataGridView2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' DataGridView4
+        ' TxtPr
         ' 
-        DataGridView4.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView4.Location = New Point(131, 12)
-        DataGridView4.Name = "DataGridView4"
-        DataGridView4.Size = New Size(494, 274)
-        DataGridView4.TabIndex = 0
+        TxtPr.Location = New Point(585, 263)
+        TxtPr.Name = "TxtPr"
+        TxtPr.Size = New Size(140, 23)
+        TxtPr.TabIndex = 29
         ' 
-        ' Total
+        ' Button5
         ' 
-        Total.Location = New Point(144, 336)
-        Total.Name = "Total"
-        Total.Size = New Size(122, 45)
-        Total.TabIndex = 1
-        Total.Text = "Mostrar total"
-        Total.UseVisualStyleBackColor = True
+        Button5.Location = New Point(443, 311)
+        Button5.Name = "Button5"
+        Button5.Size = New Size(116, 39)
+        Button5.TabIndex = 28
+        Button5.Text = "Salir"
+        Button5.UseVisualStyleBackColor = True
         ' 
-        ' asd
+        ' Button1
         ' 
-        asd.Location = New Point(294, 339)
-        asd.Name = "asd"
-        asd.Size = New Size(117, 42)
-        asd.TabIndex = 2
-        asd.Text = "asd"
-        asd.UseVisualStyleBackColor = True
+        Button1.Location = New Point(665, 393)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(116, 38)
+        Button1.TabIndex = 27
+        Button1.Text = "Retroceder"
+        Button1.UseVisualStyleBackColor = True
         ' 
-        ' Salir
+        ' BuscarPr
         ' 
-        Salir.Location = New Point(455, 340)
-        Salir.Name = "Salir"
-        Salir.Size = New Size(122, 41)
-        Salir.TabIndex = 3
-        Salir.Text = "Salir"
-        Salir.UseVisualStyleBackColor = True
+        BuscarPr.Location = New Point(443, 251)
+        BuscarPr.Name = "BuscarPr"
+        BuscarPr.Size = New Size(116, 45)
+        BuscarPr.TabIndex = 26
+        BuscarPr.Text = "Buscar productos"
+        BuscarPr.UseVisualStyleBackColor = True
+        ' 
+        ' Button3
+        ' 
+        Button3.Location = New Point(443, 182)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(116, 45)
+        Button3.TabIndex = 25
+        Button3.Text = "Modificar productos"
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' btnbajapr
+        ' 
+        btnbajapr.Location = New Point(443, 111)
+        btnbajapr.Name = "btnbajapr"
+        btnbajapr.Size = New Size(116, 45)
+        btnbajapr.TabIndex = 24
+        btnbajapr.Text = "Baja"
+        btnbajapr.UseVisualStyleBackColor = True
+        ' 
+        ' BtnAltapr
+        ' 
+        BtnAltapr.Location = New Point(443, 51)
+        BtnAltapr.Name = "BtnAltapr"
+        BtnAltapr.Size = New Size(116, 45)
+        BtnAltapr.TabIndex = 23
+        BtnAltapr.Text = "Alta"
+        BtnAltapr.UseVisualStyleBackColor = True
+        ' 
+        ' DataGridView2
+        ' 
+        DataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView2.Location = New Point(19, 19)
+        DataGridView2.Name = "DataGridView2"
+        DataGridView2.Size = New Size(387, 355)
+        DataGridView2.TabIndex = 22
         ' 
         ' Form5
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(Salir)
-        Controls.Add(asd)
-        Controls.Add(Total)
-        Controls.Add(DataGridView4)
+        Controls.Add(TxtPr)
+        Controls.Add(Button5)
+        Controls.Add(Button1)
+        Controls.Add(BuscarPr)
+        Controls.Add(Button3)
+        Controls.Add(btnbajapr)
+        Controls.Add(BtnAltapr)
+        Controls.Add(DataGridView2)
         Name = "Form5"
         Text = "Form5"
-        CType(DataGridView4, ComponentModel.ISupportInitialize).EndInit()
+        CType(DataGridView2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
-    Friend WithEvents DataGridView4 As DataGridView
-    Friend WithEvents Total As Button
-    Friend WithEvents asd As Button
-    Friend WithEvents Salir As Button
+    Friend WithEvents TxtPr As TextBox
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents BuscarPr As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents btnbajapr As Button
+    Friend WithEvents BtnAltapr As Button
+    Friend WithEvents DataGridView2 As DataGridView
 End Class

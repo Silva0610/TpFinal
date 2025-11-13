@@ -140,7 +140,7 @@ Public Class Venta
         Try
             conexion.Open()
 
-            ' 1. CAPTURAR Y VALIDAR CLIENTE
+
             inputIdCl = InputBox("Ingrese el ID del Cliente (IdCl):")
             If String.IsNullOrWhiteSpace(inputIdCl) Then Return 0
             If Not ExisteRegistro("clientes", "IdCl", CInt(inputIdCl), conexion) Then
@@ -148,7 +148,6 @@ Public Class Venta
             End If
             nuevaVenta.IdCl = CInt(inputIdCl)
 
-            ' 2. CAPTURAR Y VALIDAR PRODUCTO
             inputIdPr = InputBox("Ingrese el ID del Producto (IdPr) inicial:")
             If String.IsNullOrWhiteSpace(inputIdPr) Then Return 0
             PrecioUnitario = ObtenerPrecioProducto(CInt(inputIdPr), conexion)
@@ -158,7 +157,6 @@ Public Class Venta
             nuevaVenta.IdPr = CInt(inputIdPr)
             nuevaVenta.Total = PrecioUnitario
 
-            ' 3. CAPTURA Y VALIDACIÓN DE FECHA (CORREGIDA)
             inputFechaString = InputBox("Ingrese la fecha de venta (AAAA-MM-DD o deja en blanco para hoy):")
 
             If String.IsNullOrWhiteSpace(inputFechaString) Then
@@ -181,7 +179,6 @@ Public Class Venta
 
             comando.Parameters.AddWithValue("@IdCl", nuevaVenta.IdCl)
             comando.Parameters.AddWithValue("@IdPr", nuevaVenta.IdPr)
-            ' Usar nuevaVenta.fecha, que ya fue validada
             comando.Parameters.AddWithValue("@Fecha", nuevaVenta.fecha)
             comando.Parameters.AddWithValue("@Total", nuevaVenta.Total)
             comando.ExecuteNonQuery()

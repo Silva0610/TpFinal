@@ -155,15 +155,15 @@ Public Class producto
         Dim comando As MySqlCommand
         Try
             conexion.Open()
-            IdPr = Form3.DataGridView2.CurrentRow.Cells("IdPr").Value
+            IdPr = Form5.DataGridView2.CurrentRow.Cells("IdPr").Value
 
             Dim consulta As String = "UPDATE productos SET Nombre=@Nombre, Precio=@Precio, Categoria=@Categoria WHERE IdPr=@IdPr"
 
             comando = New MySqlCommand(consulta, conexion)
-            comando.Parameters.AddWithValue("@Nombre", Form3.DataGridView2.CurrentRow.Cells("Nombre").Value)
+            comando.Parameters.AddWithValue("@Nombre", Form5.DataGridView2.CurrentRow.Cells("Nombre").Value)
             comando.Parameters.AddWithValue("@IdPr", IdPr)
-            comando.Parameters.AddWithValue("@Precio", Form3.DataGridView2.CurrentRow.Cells("Precio").Value)
-            comando.Parameters.AddWithValue("@Categoria", Form3.DataGridView2.CurrentRow.Cells("Categoria").Value)
+            comando.Parameters.AddWithValue("@Precio", Form5.DataGridView2.CurrentRow.Cells("Precio").Value)
+            comando.Parameters.AddWithValue("@Categoria", Form5.DataGridView2.CurrentRow.Cells("Categoria").Value)
 
             comando.ExecuteNonQuery()
 
@@ -177,7 +177,7 @@ Public Class producto
     End Sub
     Public Sub buscarpr()
         Dim conexion As New MySqlConnection("server=localhost;port=3306; user id=root;password=;database=tablafinal")
-        Dim filtro As String = Form3.TxtPr.Text.Trim()
+        Dim filtro As String = Form5.TxtPr.Text.Trim()
 
         Try
             conexion.Open()
@@ -222,9 +222,9 @@ Public Class producto
 
 
             If tabla.Rows.Count > 0 Then
-                Form3.DataGridView2.DataSource = tabla
+                Form5.DataGridView2.DataSource = tabla
             Else
-                Form3.DataGridView2.DataSource = Nothing
+                Form5.DataGridView2.DataSource = Nothing
                 MessageBox.Show("No se encontraron productos que coincidan con el filtro.", "Búsqueda Sin Resultados", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
 
