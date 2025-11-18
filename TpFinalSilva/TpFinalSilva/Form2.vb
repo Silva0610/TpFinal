@@ -9,7 +9,7 @@ Public Class Form2
             user.DNI = txtdni2.Text
             user.Nombre = txtnombre2.Text
             user.Apellido = txtapellido2.Text
-            user.Password = txtapellido2.Text
+            user.Password = txtcontraseña2.Text
 
 
             Dim db As New Usuario()

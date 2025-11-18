@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("TpFinalSilva"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80926ffec693560413c574c3b741a26e4c514b1e"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d725d9396035335b00c838e1bf1de0e37ce2cc94"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("TpFinalSilva"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("TpFinalSilva"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
